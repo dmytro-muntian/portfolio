@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmytro Muntian</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
-    <script src="../assets/js/script.js"></script>
 </head>
     <header>
         <nav>
             <span>Dmytro Muntian</span>
-            <a href="#about">Über mich</a>
-            <a href="#skills">Kentnisse</a>
-            <a href="#experience">Berufserfahrung</a>
-            <a href="#education">Bildungsweg</a>
-            <a href="#contact">Kontakt</a>
+
+            <!-- Hamburger button (visible on mobile only) -->
+            <button class="nav-toggle" aria-label="Menü öffnen" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" onclick="closeMenu()">Über mich</a>
+                <a href="#skills" onclick="closeMenu()">Kentnisse</a>
+                <a href="#experience" onclick="closeMenu()">Berufserfahrung</a>
+                <a href="#education" onclick="closeMenu()">Bildungsweg</a>
+                <a href="#contact" onclick="closeMenu()">Kontakt</a>
+            </div>
         </nav>
     </header>
 <body>
@@ -31,9 +40,37 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about">
         <h2>Über mich</h2>
         <p class="subtitle">Ein kurzer Überblick über meine Person</p>
+        <div class="lebenslauf-box">
+        <img class="profile" src="../assets/images/profile.jpg">
+        <div class="lebenslauf">
+                <h3>Dmytro Muntian</h3>
+
+                <ul class="lebenslauf-desc">
+                    <li>
+                        <b>Geburtsdatum:</b> 25.07.2008
+                    </li>
+                    <li>
+                        <b>Geburtsort:</b> Donezk, Ukraine
+                    </li>
+                    <li>
+                        <b>Familienstand:</b> Ledig
+                    </li>
+                    <li>
+                        <b>Staatsangehörigkeit:</b> Ukrainisch
+                    </li>
+                    <li>
+                        <b>Hobbys:</b> IT, Lesen, Auto fahren
+                    </li>
+                    <li>
+                        <b>Schulabschluss:</b> Fachhochschulreife (2026)
+                    </li>
+                </ul>
+
+            </div>
+            </div>
         <div class="about-cards">
         <div class="school">
             <h3>Hintergrund</h3>
@@ -261,21 +298,21 @@
             <div class="skillcard">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.2 38.4"><g fill-rule="evenodd" clip-rule="evenodd"><path d="M3.03 0h49.13c1.67 0 3.03 1.36 3.03 3.03v32.33c0 1.66-1.36 3.02-3.02 3.03H3.02C1.36 38.4 0 37.03 0 35.37V3.03C0 1.36 1.36 0 3.03 0z"/><path d="M0 12.8h55.2v22.57c0 1.67-1.36 3.03-3.03 3.03H3.03C1.36 38.4 0 37.04 0 35.37V12.8z" fill="#d00"/><path d="M0 25.6h55.2v9.77c0 1.66-1.36 3.02-3.02 3.03H3.03A3.04 3.04 0 010 35.37V25.6z" fill="#ffce00"/></g></svg>
 
-                <p>Deutsche Sprache</p>
+                <p>Deutsch</p>
 
                 <p>C1</p>
             </div>
             <div class="skillcard">
                 <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.2 38.4" style="enable-background:new 0 0 55.2 38.4" xml:space="preserve"><style type="text/css">.st0-en{fill:#FEFEFE;} .st1-en{fill:#C8102E;} .st2-en{fill:#012169;}</style><g><path class="st0-en" d="M2.87,38.4h49.46c1.59-0.09,2.87-1.42,2.87-3.03V3.03c0-1.66-1.35-3.02-3.01-3.03H3.01 C1.35,0.01,0,1.37,0,3.03v32.33C0,36.98,1.28,38.31,2.87,38.4L2.87,38.4z"/><polygon class="st1-en" points="23.74,23.03 23.74,38.4 31.42,38.4 31.42,23.03 55.2,23.03 55.2,15.35 31.42,15.35 31.42,0 23.74,0 23.74,15.35 0,15.35 0,23.03 23.74,23.03"/><path class="st2-en" d="M33.98,12.43V0h18.23c1.26,0.02,2.34,0.81,2.78,1.92L33.98,12.43L33.98,12.43z"/><path class="st2-en" d="M33.98,25.97V38.4h18.35c1.21-0.07,2.23-0.85,2.66-1.92L33.98,25.97L33.98,25.97z"/><path class="st2-en" d="M21.18,25.97V38.4H2.87c-1.21-0.07-2.24-0.85-2.66-1.94L21.18,25.97L21.18,25.97z"/><path class="st2-en" d="M21.18,12.43V0H2.99C1.73,0.02,0.64,0.82,0.21,1.94L21.18,12.43L21.18,12.43z"/><polygon class="st2-en" points="0,12.8 7.65,12.8 0,8.97 0,12.8"/><polygon class="st2-en" points="55.2,12.8 47.51,12.8 55.2,8.95 55.2,12.8"/><polygon class="st2-en" points="55.2,25.6 47.51,25.6 55.2,29.45 55.2,25.6"/><polygon class="st2-en" points="0,25.6 7.65,25.6 0,29.43 0,25.6"/><polygon class="st1-en" points="55.2,3.25 36.15,12.8 40.41,12.8 55.2,5.4 55.2,3.25"/><polygon class="st1-en" points="19.01,25.6 14.75,25.6 0,32.98 0,35.13 19.05,25.6 19.01,25.6"/><polygon class="st1-en" points="10.52,12.81 14.78,12.81 0,5.41 0,7.55 10.52,12.81"/><polygon class="st1-en" points="44.63,25.59 40.37,25.59 55.2,33.02 55.2,30.88 44.63,25.59"/></g></svg>
 
-                <p>Englische Sprache</p>
+                <p>Englisch</p>
 
                 <p>B2</p>
             </div>
             <div class="skillcard">
                 <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.32 38.52" style="enable-background:new 0 0 55.32 38.52" xml:space="preserve"><style type="text/css">.st0-ru{fill:#FFFFFF;} .st1-ru{fill:#D52B1E;} .st2-ru{fill:#0039A6;} .st3-ru{fill:none;stroke:#CCCCCC;stroke-width:0.1199;stroke-miterlimit:2.6131;}</style><g><path class="st0-ru" d="M3.09,0.06h49.13c1.67,0,3.03,1.36,3.03,3.03v16.17H0.06V3.09C0.06,1.42,1.42,0.06,3.09,0.06L3.09,0.06z"/><path class="st1-ru" d="M0.06,19.26h55.2v16.17c0,1.67-1.36,3.03-3.03,3.03H3.09c-1.67,0-3.03-1.37-3.03-3.03V19.26L0.06,19.26z"/><polygon class="st2-ru" points="0.06,12.86 55.26,12.86 55.26,25.66 0.06,25.66 0.06,12.86"/><path class="st3-ru" d="M3.09,0.06h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.36,3.03-3.03,3.03H3.09 c-1.67,0-3.03-1.37-3.03-3.03V3.09C0.06,1.42,1.42,0.06,3.09,0.06L3.09,0.06z"/></g></svg>
 
-                <p>Russische Sprache</p>
+                <p>Russisch</p>
 
                 <p>С2</p>
             </div>
@@ -286,7 +323,7 @@
 	.st1-ua{fill:#005BBB;}
 ]]></style><g><path class="st1-ua" d="M3.03,0h49.13c1.67,0,3.03,1.36,3.03,3.03v32.33c0,1.67-1.37,3.03-3.03,3.03H3.03C1.37,38.4,0,37.04,0,35.37 V3.03C0,1.36,1.37,0,3.03,0L3.03,0z"/><path class="st0-ua" d="M0,19.2h55.2v16.17c0,1.67-1.37,3.03-3.03,3.03H3.03C1.37,38.4,0,37.04,0,35.37V19.2L0,19.2z"/></g></svg>
 
-                <p>Ukrainische Sprache</p>
+                <p>Ukrainisch</p>
                 
                 <p>С2</p>
             </div>

@@ -3,46 +3,38 @@
 }
 
 body {
-
     font-family: 'Inter', sans-serif;
-    background-color: #00072A;
+    background-color: #0a0e27;
     text-align: center;
-    color: rgb(206, 211, 216);
+    color: #d0d9ff;
     margin: 0;
     padding: 0;
 }
 
-.hero {
-
+.hero, h2 {
     font-family: 'Poppins', sans-serif;
-
 }
 
 nav {
-
     font-family: 'Poppins', sans-serif;
-
 }
 
 header {
-    
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    background-color: rgba(0, 7, 42, 0.8);
+    background-color: rgba(10, 14, 39, 0.9);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(100, 200, 255, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-
 }
 
 nav {
-
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -51,260 +43,241 @@ nav {
 }
 
 nav span {
-
     text-align: right;
     font-size: 1.4rem;
     padding: 0.5rem;
-    color:aliceblue;
+    color: aliceblue;
     font-weight: bold;
-
+    white-space: nowrap;
 }
 
 nav a {
     text-align: center;
     padding: 0.8rem;
     text-decoration: none;
-    color: rgb(206, 211, 216);
+    color: #d0d9ff;
     transition: all 0.3s ease;
     border-radius: 6px;
-
+    white-space: nowrap;
 }
 
 nav a:hover {
-
-    color: aliceblue;
-    background-color: #0A144A;
-
+    color: #64c8ff;
+    background-color: rgba(100, 200, 255, 0.1);
 }
 
+/* Hamburger menu button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 5px;
+    background: none;
+    border: none;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #d0d9ff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    font-size: inherit;
+    padding: 0;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
 
 section {
-
     width: 100vw;
     min-height: 100vh;
     padding-top: 3.5rem;
-
 }
 
 .hero {
-
-    background: radial-gradient(circle at center, #0A144A 0%, #00072A 100%, transparent 51%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: radial-gradient(circle at center, #1a2557 0%, #0a0e27 100%, transparent 51%);
+    border-bottom: 1px solid rgba(100, 200, 255, 0.1);
     width: 100%;
-    
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
-
     font-size: 6rem;
     margin: auto;
     letter-spacing: -0.2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+    background: linear-gradient(135deg, #64c8ff 0%, #ffffff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .hero p {
-
     font-size: 2rem;
     margin-top: 0.5rem;
     letter-spacing: 0.3rem;
-    color: #a1a1aa;
-
+    color: #a5c9ff;
 }
 
 .hero-text {
-
     margin: 18rem;
-
 }
 
 section h2 {
-
     font-size: 3.5rem;
     margin-bottom: 0.1rem;
-    background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+    background: linear-gradient(135deg, #64c8ff 0%, #ffffff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .subtitle {
-
     font-size: 1.3rem;
     margin-top: 0.1rem;
     margin: 0;
-
 }
 
+/* ABOUT */
 .about-cards {
-
     display: flex;
     gap: 6rem;
     align-items: stretch;
-    margin-top: 5rem;
     margin: 6rem;
-
+    margin-top: 7.3rem;
 }
 
 .school, .characteristics, .future {
-
     flex: 1;
     text-align: left;
     padding: 1.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(100, 200, 255, 0.2);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(310deg, #000729 0%, #070164 100%);
+    background: linear-gradient(310deg, #0f1a47 0%, #051041 100%);
     font-size: 0.95rem;
     transition: 0.3s ease;
-
 }
 
 .school:hover, .characteristics:hover, .future:hover {
-
     transform: scale(1.05);
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    background: linear-gradient(310deg, #000d4a 0%, #0b0192 100%);
+    border: 3px solid rgba(100, 200, 255, 0.4);
+    background: linear-gradient(310deg, #1a2557 0%, #0f1a47 100%);
     padding: 1.7rem;
-    
 }
 
 section h3 {
-
     font-size: 1.8rem;
     text-align: left;
-    
 }
 
+/* SKILLS */
 .coding, .software, .hardware, .others {
-
     display: flex;
     margin: auto;
     justify-content: center;
     margin-top: 3rem;
     align-items: stretch;
     gap: 3rem;
-
+    flex-wrap: wrap;
 }
 
 .skills {
-
-    background-color: #040d38;
+    background-color: #051041;
     padding-bottom: 4rem;
-
 }
 
 .skillcard {
-
     margin: 1rem;
-    border: 3px solid rgba(255, 255, 255, 0.05);
+    border: 3px solid rgba(100, 200, 255, 0.2);
     border-radius: 10px;
-    background-color: #111d57;
-    display: block;
-    padding: 1rem;
-    width: 12rem;
-    height: 12rem;
+    background-color: #0f1a47;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-content: center;
     justify-content: center;
+    padding: 0.8rem;
+    width: 12rem;
+    min-height: 12rem;
+    height: auto;
     transition: 0.3s ease;
-
+    overflow: hidden;
 }
 
 .skillcard:hover {
-
     transform: scale(1.1);
-    background-color: #142268;
-    border: 4px solid rgba(255, 255, 255, 0.7);
-
+    background-color: #1a2557;
+    border: 4px solid rgba(100, 200, 255, 0.5);
 }
 
 .skillcard img {
-
     width: 4rem;
     height: 4rem;
     margin-bottom: 0.5rem;
-    
-
 }
 
 .skillcard p {
-
     margin-bottom: 0rem;
     margin-top: 0rem;
-
 }
 
 .dots {
-
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
 }
 
 .dot {
-
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: #a1a1aa;
+    background: #a5c9ff;
     display: inline-block;
-
 }
 
 .dot-a {
-
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
     background: #ffffff;
     display: inline-block;
-
 }
 
 .skillcard svg {
-
     width: 4rem;
     height: 4rem;
     margin-bottom: 0.5rem;
     fill: rgb(0, 0, 0);
-
 }
 
 .skills h3 {
-
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 0rem;
-
 }
 
 .skillcard p:first-of-type {
-
     font-weight: bold;
-
 }
 
+/* EXPERIENCE */
 .experience {
-
     margin-bottom: 6rem;
-
 }
 
 .experience h2 {
-
     margin-top: 2rem;
-
 }
 
 .experience img {
-
     width: 50%;
     height: 70vh;
     object-fit: cover;
@@ -313,17 +286,13 @@ section h3 {
     position: absolute;
     z-index: 2;
     transition: 0.3s ease;
-
 }
 
 .experience img:hover {
-
     transform: scale(1.05);
-
 }
 
 .risebox {
-
     display: flex;
     width: 70%;
     height: 80%;
@@ -332,14 +301,12 @@ section h3 {
     margin-top: 2rem;
     border-radius: 10px;
     position: relative;
-
 }
 
 .risecard {
-
     padding: 2rem;
     text-align: left;
-    background-color: #040d38;
+    background-color: #051041;
     border-radius: 10px;
     position: absolute;
     z-index: 1;
@@ -347,116 +314,92 @@ section h3 {
     margin-left: 48%;
     padding-left: 5%;
     height: 70vh;
-
+    overflow-y: auto;
 }
 
 .risecard h3 {
-
     margin-top: 0rem;
     margin-bottom: 0.5rem;
-
 }
 
 .rise-head {
-
     font-weight: bold;
-
 }
 
 .rise-desc {
-
     font-weight: 0.95;
-    color: #a3a4b0;
+    color: #8da5d9;
     font-size: 0.88rem;
-
 }
 
+/* EDUCATION */
 .education {
-
-    background-color: #040d38;
-
+    background-color: #051041;
 }
 
 .education h2 {
-
     margin-top: 2rem;
-
 }
 
 .education .subtitle {
-
     margin-bottom: 2rem;
     margin-top: 1rem;
-
 }
 
 .educards {
-
     display: flex;
     margin: auto;
     justify-content: center;
     gap: 5rem;
     align-items: stretch;
-
+    flex-wrap: wrap;
+    padding: 2rem;
 }
 
 .educard {
-
-    border: 3px solid rgba(255, 255, 255, 0.05);
+    border: 3px solid rgba(100, 200, 255, 0.2);
     border-radius: 10px;
-    background-color: #111d57;
+    background-color: #0f1a47;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
     transition: 0.3s ease;
     flex: 0 1 auto;
-    transition: 0.3s ease;
-
 }
 
 .educard:hover {
-
     transform: scale(1.05);
-    background-color: #142268;
-    border: 4px solid rgba(255, 255, 255, 0.7);
-
+    background-color: #1a2557;
+    border: 4px solid rgba(100, 200, 255, 0.5);
 }
 
 .educard img {
-
     width: 20rem;
     height: 20rem;
     object-fit: cover;
     padding: 2rem;
-
 }
 
 .educard p {
-
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
 }
 
 .education h3 {
-
     text-align: center;
     font-size: large;
     margin-bottom: 0.5rem;
-
 }
 
 .schoolgeo {
-
     margin-top: 0rem;
     margin-bottom: 1rem;
-    color: #a3a4b0;
-
+    color: #8da5d9;
 }
 
+/* CONTACT */
 .contactcards {
-
     display: flex;
     margin: auto;
     justify-content: center;
@@ -464,66 +407,490 @@ section h3 {
     width: 70%;
     gap: 6rem;
     margin-top: 6rem;
-
+    flex-wrap: wrap;
 }
 
 .contact h2 {
-
     margin-top: 5rem;
-
 }
 
 .contactcard {
-
     flex: 1;
     text-align: left;
     padding: 1.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(100, 200, 255, 0.2);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(310deg, #000729 0%, #070164 100%);
+    background: linear-gradient(310deg, #0f1a47 0%, #051041 100%);
     font-size: 0.95rem;
     transition: 0.3s ease;
-    width: 20rem;
+    min-width: 200px;
+    max-width: 280px;
     height: 20rem;
     text-align: center;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .contactcard:hover {
-
     transform: scale(1.05);
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    background: linear-gradient(310deg, #000d4a 0%, #0b0192 100%);
+    border: 3px solid rgba(100, 200, 255, 0.4);
+    background: linear-gradient(310deg, #1a2557 0%, #0f1a47 100%);
     padding: 1.7rem;
-
 }
 
 .contactcard img {
-
     width: 50%;
-
 }
 
 .contactcard span {
-
     font-size: 1.8rem;
-
 }
 
 .contactcard p {
-
     margin: 0;
-
+    word-break: break-all;
 }
 
 footer {
-
-    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
-
 }
 
+/* LEBENSLAUF / PROFILE */
+.profile {
+    width: 50%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: 25%;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    z-index: 2;
+    margin-right: -3%;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.lebenslauf-box {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 60vh;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.lebenslauf {
+    padding: 2rem;
+    text-align: left;
+    background-color: #051041;
+    border-radius: 10px;
+    width: 50%;
+    padding-left: 5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+.lebenslauf h3 {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.lebenslauf-desc {
+    color: #8da5d9;
+    font-size: 1rem;
+}
+
+.lebenslauf ul {
+    padding: 0;
+}
+
+.lebenslauf li {
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* ============================================
+   TABLET (max-width: 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    nav {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .hero-text {
+        margin: 10rem 4rem;
+    }
+
+    section h2 {
+        font-size: 2.8rem;
+    }
+
+    .about-cards {
+        gap: 2rem;
+        margin: 2rem;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .lebenslauf-box {
+        width: 85%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .profile {
+        height: 50vh;
+    }
+
+    .lebenslauf {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .risebox {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        min-height: 600px;
+    }
+
+    .experience img {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .risecard {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        padding-left: 2rem;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .educards {
+        gap: 2rem;
+    }
+
+    .educard img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .contactcards {
+        width: 90%;
+        gap: 2rem;
+    }
+
+    .contactcard {
+        height: auto;
+        min-height: 200px;
+        padding: 1.5rem;
+    }
+}
+
+/* ============================================
+   MOBILE (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Navigation - hamburger */
+    nav {
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(10, 14, 39, 0.98);
+        border-bottom: 1px solid rgba(100, 200, 255, 0.15);
+        padding: 1rem 0;
+        z-index: 999;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem 2rem;
+        width: 100%;
+        text-align: left;
+        border-radius: 0;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(100, 200, 255, 0.1);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .hero-text {
+        margin: 6rem 2rem;
+    }
+
+    /* Sections */
+    section {
+        padding-top: 4rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* About */
+    .lebenslauf-box {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .profile {
+        width: 100%;
+        height: 300px;
+        margin-right: 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .lebenslauf {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .lebenslauf h3 {
+        font-size: 1.5rem;
+    }
+
+    .lebenslauf-desc {
+        font-size: 0.9rem;
+    }
+
+    .lebenslauf li {
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .about-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .school:hover, .characteristics:hover, .future:hover {
+        transform: none;
+    }
+
+    /* Skills */
+    .coding, .software, .hardware, .others {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .skillcard {
+        width: 8rem;
+        height: 10rem;
+        margin: 0.3rem;
+        padding: 0.8rem;
+    }
+
+    .skillcard img, .skillcard svg {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .skillcard p {
+        font-size: 0.75rem;
+    }
+
+    .skills h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Experience */
+    .risebox {
+        flex-direction: column;
+        width: 92%;
+        height: auto;
+    }
+
+    .experience img {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .experience img:hover {
+        transform: none;
+    }
+
+    .risecard {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        padding: 1.5rem;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* Education */
+    .educards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .educard {
+        width: 90%;
+        max-width: 360px;
+    }
+
+    .educard img {
+        width: 100%;
+        height: 200px;
+        padding: 1rem;
+    }
+
+    .educard:hover {
+        transform: none;
+    }
+
+    /* Contact */
+    .contactcards {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .contactcard {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        padding: 1.5rem;
+    }
+
+    .contactcard:hover {
+        transform: none;
+    }
+
+    .contactcard span {
+        font-size: 1.4rem;
+    }
+
+    .contactcard p {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+
+    .contact h2 {
+        margin-top: 3rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .hero-text {
+        margin: 4rem 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.9rem;
+    }
+
+    .skillcard {
+        width: 7rem;
+        height: 9rem;
+        margin: 0.2rem;
+    }
+
+    .skillcard img, .skillcard svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .lebenslauf h3 {
+        font-size: 1.3rem;
+    }
+
+    .lebenslauf-desc {
+        font-size: 0.85rem;
+    }
+}
