@@ -16,39 +16,50 @@ document.addEventListener('click', function(event) {
     }
 });
 
-particlesJS("particles-js", {
-    particles: {
-        number: { value: 120, density: { enable: true, value_area: 900 } },
-        color: { value: ["#ffffff", "#a5c9ff", "#64c8ff"] },
-        shape: { type: "circle" },
-        opacity: {
-            value: 0.6,
-            random: true,
-            anim: { enable: true, speed: 0.8, opacity_min: 0.05, sync: false }
-        },
-        size: {
-            value: 3.5,
-            random: true,
-            anim: { enable: true, speed: 2, size_min: 1, sync: false }
-        },
-        line_linked: { enable: false },
-        move: {
-            enable: true,
-            speed: 1.8,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "bounce",
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: { enable: false },
-            onclick: { enable: false },
-            resize: true
-        }
-    },
-    retina_detect: true
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 160,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#a5c9ff" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
+                },
+                "line_linked": { "enable": false },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "top",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": false },
+                    "onclick": { "enable": false },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    }
 });
