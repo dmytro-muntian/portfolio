@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -66,7 +70,6 @@ nav a:hover {
     background-color: rgba(100, 200, 255, 0.1);
 }
 
-/* Hamburger menu button */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -146,7 +149,6 @@ section h2 {
     margin: 0;
 }
 
-/* ABOUT */
 .about-cards {
     display: flex;
     gap: 6rem;
@@ -268,7 +270,6 @@ section h3 {
     font-weight: bold;
 }
 
-/* EXPERIENCE */
 .experience {
     margin-bottom: 6rem;
 }
@@ -332,7 +333,6 @@ section h3 {
     font-size: 0.88rem;
 }
 
-/* EDUCATION */
 .education {
     background-color: #051041;
 }
@@ -398,7 +398,6 @@ section h3 {
     color: #8da5d9;
 }
 
-/* CONTACT */
 .contactcards {
     display: flex;
     margin: auto;
@@ -458,7 +457,6 @@ footer {
     padding: 1.5rem;
 }
 
-/* LEBENSLAUF / PROFILE */
 .profile {
     width: 50%;
     height: 60vh;
@@ -521,9 +519,6 @@ footer {
     padding-bottom: 1rem;
 }
 
-/* ============================================
-   TABLET (max-width: 1024px)
-   ============================================ */
 @media (max-width: 1024px) {
     nav {
         width: 90%;
@@ -611,11 +606,8 @@ footer {
     }
 }
 
-/* ============================================
-   MOBILE (max-width: 768px)
-   ============================================ */
 @media (max-width: 768px) {
-    /* Navigation - hamburger */
+
     nav {
         width: 100%;
         padding: 0.8rem 1.2rem;
@@ -655,7 +647,6 @@ footer {
         background-color: rgba(100, 200, 255, 0.1);
     }
 
-    /* Hero */
     .hero {
         min-height: 100vh;
     }
@@ -674,7 +665,6 @@ footer {
         margin: 6rem 2rem;
     }
 
-    /* Sections */
     section {
         padding-top: 4rem;
     }
@@ -689,7 +679,6 @@ footer {
         padding: 0 1rem;
     }
 
-    /* About */
     .lebenslauf-box {
         flex-direction: column;
         width: 90%;
@@ -736,7 +725,6 @@ footer {
         transform: none;
     }
 
-    /* Skills */
     .coding, .software, .hardware, .others {
         gap: 0.5rem;
         margin-top: 1.5rem;
@@ -763,7 +751,6 @@ footer {
         font-size: 1.8rem;
     }
 
-    /* Experience */
     .risebox {
         flex-direction: column;
         width: 92%;
@@ -790,7 +777,6 @@ footer {
         border-radius: 0 0 10px 10px;
     }
 
-    /* Education */
     .educards {
         flex-direction: column;
         align-items: center;
@@ -813,7 +799,6 @@ footer {
         transform: none;
     }
 
-    /* Contact */
     .contactcards {
         flex-direction: column;
         align-items: center;
@@ -847,16 +832,12 @@ footer {
         margin-top: 3rem;
     }
 
-    /* Footer */
     footer {
         padding: 1rem;
         font-size: 0.9rem;
     }
 }
 
-/* ============================================
-   SMALL MOBILE (max-width: 480px)
-   ============================================ */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2.2rem;
